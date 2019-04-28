@@ -1,0 +1,817 @@
+extends blocks/base.jade
+
+block title 
+	title Главная
+
+block content
+
+		include blocks/header.jade
+		
+		// first-screen
+		section.first-screen
+			.wrapper
+				.first-screen_location.mobile-hide
+					a(href="tel:+78002225812").first-screen_phone 8 800 222-58-12 
+					.first-screen_address г. Краснодар, ул. Клубная, 12а, офис 233/2
+			.slider-first
+				.slider-first_slide
+					.wrapper
+						.slider-first_content
+							h1.slider-first_title Быстровозводимое строительство 
+								span домов и зданий 
+								| из ЛСТК 
+								span  в Краснодарском крае
+							.slider-first_price
+								.slider-first_val 1600 
+								.slider-first_currency руб/м2 
+									span цена
+							.slider-first_time срок 7-45 дней
+							a(href="#").slider-first_btn.button заказать консультацию
+				.slider-first_slide
+					.wrapper
+						.slider-first_content
+							h1.slider-first_title Быстровозводимое строительство 
+								span домов и зданий 
+								| из ЛСТК 
+								span  в Краснодарском крае
+							.slider-first_price
+								.slider-first_val 1600 
+								.slider-first_currency руб/м2 
+									span цена
+							.slider-first_time срок 7-45 дней
+							a(href="#").slider-first_btn.button заказать консультацию
+				.slider-first_slide
+					.wrapper
+						.slider-first_content
+							h1.slider-first_title Быстровозводимое строительство 
+								span домов и зданий 
+								| из ЛСТК 
+								span  в Краснодарском крае
+							.slider-first_price
+								.slider-first_val 1600 
+								.slider-first_currency руб/м2 
+									span цена
+							.slider-first_time срок 7-45 дней
+							a(href="#").slider-first_btn.button заказать консультацию
+			.first-screen_dots
+		// /first-screen
+
+		// catalog
+		section.catalog
+			.wrapper
+				h2.catalog_title Каталог готовых проектов
+				.catalog_tabs.tabs
+					.catalog_list
+						ul.catalog_trigger.tabs_trigger
+							li.catalog_item.tabs_item.active Частные дома  
+							li.catalog_item.tabs_item Склады  
+							li.catalog_item.tabs_item Автомойки  
+							li.catalog_item.tabs_item Автосалоны  
+							li.catalog_item.tabs_item Офисные здания  
+							li.catalog_item.tabs_item СТО / Шиномонтаж  
+							li.catalog_item.tabs_item Магазины / Павильоны
+					.catalog_content.tabs_content
+						.catalog_block.tabs_block
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-0
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-1
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2 
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 2
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-2
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 3
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-3
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 4
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-4
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 5
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-5
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 6
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+						.catalog_block.tabs_block.hide
+							.catalog_controll.catalog_controll--prev
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_controll.catalog_controll--next
+								img(src="img/slider-control-mob.svg", alt="icon")
+							.catalog_row.slider-catalog#slider-catalog-6
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+								.catalog_col
+									.project-card
+										.project-card_img
+											img(src="img/project-img-1.jpg", alt="image")
+										.project-card_content
+											.project-card_title Торговый  павильон 7
+											.project-card_text
+												img(src="img/area.svg", alt="icon").project-card_icon
+												span S общая 263 м2
+											.project-card_text
+												img(src="img/calendar.svg", alt="icon").project-card_icon
+												span Изготовление: 45-50 дней
+											.project-card_price цена от: 
+												span 684 000 
+												| руб.
+										a(href="#").project-card_btn.button Подробнее
+				a(href="#").catalog_all Посмотреть все
+		// /catalog
+
+		// individual
+		.individual
+			.wrapper
+				h2.individual_title Индивидуальные проекты  
+				p.individual_text Специалисты нашей компании могут не только предложить готовый типовой проект, но и разработать индивидуальный ЛСТК-проект с учетом ваших пожеланий и возможностей.
+				.individual_item
+					img(src="img/ruler.svg", alt="icon").individual_icon
+					span Сроки разработки индивидуального  ЛСТК-проекта от 3 дней.
+				a(href="#").individual_btn.button Оставить заявку
+				.individual_play.icon-play2
+		// /individual
+
+		include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	//- script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/jquery.tinyscrollbar.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	script(src="js/script.js")

@@ -7,15 +7,15 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1360px; // Максимальная ширина контейнера
+$gutter: 30px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
-$offset-sm: 15px; // Поля контейнера на мобилке
+$offset-sm: 25px; // Поля контейнера на мобилке
 // Брэйкпоинты
-$break_xl: 1400px;
+$break_xl: 1440px;
 $break_lg: 1200px;
-$break_md: 1024px;
-$break_sm: 768px;
+$break_md: 1025px;
+$break_sm: 769px;
 $break_xs: 576px;
 
 // Переменные для кастомизации Bootstrap 4
@@ -26,18 +26,25 @@ $break_xs: 576px;
 // $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("Roboto", "../fonts/Roboto/RobotoThin/RobotoThin", 200, normal);
+@include font-face("Roboto", "../fonts/Roboto/RobotoLight/RobotoLight", 300, normal);
+@include font-face("Roboto", "../fonts/Roboto/RobotoRegular/RobotoRegular", normal, normal);
+@include font-face("Roboto", "../fonts/Roboto/RobotoMedium/RobotoMedium", 500, normal);
+@include font-face("Roboto", "../fonts/Roboto/RobotoBold/RobotoBold", 700, normal);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Regular/Rubik-Regular", normal, normal);
+@include font-face("RubikMonoOne", "../fonts/RubikMonoOne/RubikMonoOne-Regular", normal, normal);
 
 // Цвета
-// $black: #000;
+$black: #1A222C;
+$orange: #FBA819;
 
 // Блоки
-@import 'blocks/menu';
+// @import 'blocks/menu';
 // @import 'blocks/mmenu';
 @import 'blocks/tabs';
-@import 'blocks/accordeon';
-@import 'blocks/form';
-@import 'blocks/modal';
-@import 'blocks/tooltipster-noir';
+// @import 'blocks/accordeon';
+// @import 'blocks/form';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
 
 @import 'template';
