@@ -379,6 +379,9 @@ h2 {
 // catalog
 .catalog {
 	padding: 73px 0 80px;
+	.wrapper {
+		position: relative;
+	}
 	&_title {
 		max-width: 600px;
 		margin-bottom: 41px;
@@ -421,7 +424,7 @@ h2 {
 	&_col {
 		@include col(4);
 		@include col-lg(6);
-		@include col-md(12);
+		@include col-sm(12);
 		outline: none;
 	}
 	&_controll {
@@ -443,6 +446,27 @@ h2 {
 			box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2);
 		}
 	}
+	@media (max-width: $break_md) {
+		&_tabs {
+			flex-wrap: wrap;
+		}
+		&_trigger {
+			margin-bottom: 55px;
+		}
+		&_list {
+			width: 100%;
+			margin-right: 0;
+		}
+		&_item {
+			display: inline-block;
+			&:hover {
+				background-color: #fff;
+			}
+			&.active {
+				background-color: #fff;
+			}
+		}
+	}
 	@media (max-width: $break_sm) {
 		padding: 42px 0 20px;
 		.wrapper {
@@ -454,26 +478,17 @@ h2 {
 			margin-bottom: 20px;
 		}
 		&_tabs {
-			flex-wrap: wrap;
+			
 		}
 		&_list {
-			width: 100%;
-			margin-right: 0;
+			
 		}
 		&_trigger {
 			padding: 10px;
-			margin-bottom: 55px;
 		}
 		&_item {
 			padding: 4px 0 4px 8px;
-			display: inline-block;
 			font-size: 15px;
-			&:hover {
-				background-color: #fff;
-			}
-			&.active {
-				background-color: #fff;
-			}
 		}
 		&_content {
 			
@@ -581,6 +596,29 @@ h2 {
 		}
 	}
 }
+.catalog-prize {
+	max-width: 400px;
+	padding: 30px 30px 57px 30px;
+	background-color: $black;
+	position: absolute;
+	top: -242px;
+	right: 30px;
+	z-index: 2;
+	&_icon {
+		margin-bottom: 15px;
+	}
+	&_title {
+		margin-bottom: 10px;
+		font-size: 24px;
+		color: $orange;
+	}
+	&_text {
+		color: #fff;
+	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
+}
 // /catalog
 
 // individual
@@ -617,7 +655,7 @@ h2 {
 		padding: 34px;
 		background-color: $orange;
 		position: absolute;
-		right: 0;
+		right: 30px;
 		bottom: 0;
 		font-size: 62px;
 		color: $black;
@@ -656,7 +694,114 @@ h2 {
 		}
 		&_play {
 			display: none;
+			padding-right: 25px;
 		}
 	}
 }
 // /individual
+
+// adventages
+.adventages {
+	.wrapper {
+		position: relative;
+		padding-top: 120px;
+	}
+	&_title {
+		max-width: 750px;
+		position: absolute;
+		top: 82px;
+		left: 130px;
+		span {
+			color: $orange;
+		}
+	}
+	&_tabs {
+		display: flex;
+	}
+	&_list {
+		width: 240px;
+		padding-top: 150px;
+		flex-shrink: 0;
+	}
+	&_trigger {
+		
+	}
+	&_item {
+		padding: 17px 5px 17px 20px;
+		font-weight: bold;
+		position: relative;
+		&:after {
+			content: '';
+			display: block;
+			height: 100%;
+			width: 4px;
+			background-color: $orange;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: 0.3s;
+		}
+		&:hover {
+			background-color: #fff;
+			&:after {
+				opacity: 1;
+			}
+		}
+		&.active {
+			background-color: #fff;
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	&_content {
+		flex-grow: 2;
+	}
+	&_block {
+		display: flex;
+	}
+	&_subblock {
+		padding-top: 150px;
+	}
+	&_block-text {
+		margin-right: 30px;
+		padding: 33px 30px;
+		background-color: #fff;
+		color: #434A54;
+	}
+	&_subitem {
+		margin-bottom: 31px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	&_subtext {
+		font-size: 17px;
+		line-height: 1.8;
+	}
+	&_img {
+		width: 48%;
+		margin-bottom: -30px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+		align-self: center;
+		img {
+			max-width: none;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 115%;
+		}
+	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
+}
+// /adventages
