@@ -872,6 +872,18 @@ block content
 								img(src="img/adventages-speed.jpg", alt="image")
 		// /adventages
 
+		// callback
+		section.callback
+			.wrapper
+				h2.callback_title Профессиональные 
+					span специалисты компании «Директ ЛТСК» 
+					| помогут вам!
+				form(action="#").callback_form
+					input(type="text", name="tel" placeholder="Телефон").callback_input
+					input(type="text", name="name" placeholder="Имя").callback_input
+					a(href="#").callback_btn.button Заказать звонок
+		// /callback
+
 		include blocks/footer.jade
 
 block js
