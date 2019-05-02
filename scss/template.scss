@@ -1168,3 +1168,227 @@ h2 {
 	}
 }
 // /technologies
+
+// about-company
+.about-company {
+	padding: 86px 0 40px;
+	background-color: $black;
+	&_title {
+		color: #fff;
+		margin-bottom: 44px;
+	}
+	&_content {
+		display: flex;
+	}
+	&_text {
+		width: 40%;
+		color: #B1BDCC;
+		line-height: 1.7;
+		p {
+			margin-bottom: 34px;
+		}
+	}
+	&_news {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		width: 60%;
+	}
+	&_col {
+		width: 40%;
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+	&_img {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 13px;
+		img {
+			max-width: none;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 55%;
+		}
+	}
+	&_date {
+		margin-bottom: 18px;
+		font-size: 12px;
+		color: #697079;
+	}
+	&_subtitle {
+		color: #fff;
+		font-weight: bold;
+	}
+	&_link {
+		color: $orange;
+		text-decoration: underline;
+		font-size: 14px;
+	}
+	@media (max-width: $break_md) {
+		&_text {
+			width: 60%;
+		}
+		&_news {
+			justify-content: center;
+		}
+		&_col {
+			max-width: 200px;
+			width: 100%;
+		}
+	}
+	@media (max-width: $break_sm) {
+		padding: 65px 0 100px;
+		&_title {
+			margin-bottom: 55px;
+			font-size: 30px;
+			text-align: center;
+		}
+		&_text {
+			width: 100%;
+		}
+		&_news {
+			display: none;
+		}
+	}
+}
+// /about-company
+
+// trust
+.trust {
+	padding: 68px 0 237px;
+	background-color: $black;
+	&_title {
+		max-width: 320px;
+		margin-bottom: 42px;
+		color: #fff;
+		line-height: 1.2;
+	}
+	&_list {
+		width: 86%;
+		height: 1px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: $orange;
+		position: relative;
+	}
+	&_item {
+		max-width: 130px;
+		color: $orange;
+		position: absolute;
+		&--1 {
+			top: -107px;
+			left: 29%;
+			.trust_circle {
+				top: 100px;
+				&:before {
+					height: 42px;
+					bottom: 13px;
+				}
+			}
+		}
+		&--2 {
+			top: -107px;
+			left: 58%;
+			.trust_circle {
+				top: 100px;
+				&:before {
+					height: 42px;
+					bottom: 13px;
+				}
+			}
+		}
+		&--3 {
+			top: -107px;
+			left: 86%;
+			.trust_circle {
+				top: 100px;
+				&:before {
+					height: 42px;
+					bottom: 13px;
+				}
+			}
+		}
+		&--4 {
+			top: 49px;
+			left: 15%;
+			.trust_circle {
+				top: -56px;
+				&:before {
+					height: 23px;
+					top: 13px;
+				}
+			}
+		}
+		&--5 {
+			max-width: 200px;
+			top: 49px;
+			left: 44%;
+			.trust_circle {
+				top: -56px;
+				&:before {
+					height: 23px;
+					top: 13px;
+				}
+			}
+		}
+		&--6 {
+			top: 49px;
+			left: 72%;
+			.trust_circle {
+				top: -56px;
+				&:before {
+					height: 23px;
+					top: 13px;
+				}
+			}
+		}
+	}
+	&_span {
+		color: #fff;
+	}
+	&_circle {
+		width: 14px;
+		height: 14px;
+		border: 1px solid $orange;
+		border-radius: 50%;
+		background-color: $black;
+		position: absolute;
+		left: 14px;
+		&:after {
+			content: '';
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: $orange;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&:before {
+			content: '';
+			display: block;
+			width: 1px;
+			background-color: $orange;
+			position: absolute;
+			left: 6px;
+		}
+	}
+	@media (max-width: $break_lg) {
+		&_title {
+			margin-bottom: 130px;
+		}
+	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
+}
+// /trust
