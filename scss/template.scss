@@ -20,6 +20,9 @@ body {
 	font-family: Roboto;
 	font-size: 16px;
 	color: $black;
+	@media (max-width: $break_sm) {
+		background-color: #F0F4F9;
+	}
 }
 h1 {
 	font-family: RubikOne;
@@ -64,6 +67,9 @@ h2 {
 		padding: 17px 40px;
 		font-size: 12px;
 	}
+}
+.slick-slide {
+	outline: none;
 }
 // /settings
 
@@ -858,3 +864,155 @@ h2 {
 	}
 }
 // /callback
+
+// portfolio
+.portfolio {
+	padding: 93px 0px;
+	background-color: #fff;
+	&_title {
+		margin-bottom: 54px;
+		text-align: center;
+		margin-left: 100px;
+	}
+	&_slider {
+		position: relative;
+	}
+	@media (max-width: $break_sm) {
+		padding-left: 7px;
+		padding-right: 7px;
+		padding-bottom: 77px;
+		background-color: #F0F4F9;
+		&_title {
+			margin-left: 0;
+			margin-bottom: 70px;
+			font-size: 30px;
+		}
+	}
+}
+.slider-portfolio {
+	padding-left: 100px;
+	&_slide {
+		&:not(.slick-active) {
+			.slider-portfolio_text {
+				opacity: 0;
+			}
+			.slider-portfolio_img {
+				img {
+					transition: .3s;
+					filter: opacity(30%);
+				}
+			}
+		}
+	}
+	&_block {
+		padding: 0 10px;
+	}
+	&_img {
+		margin-bottom: 15px;
+		img {
+			
+		}
+	}
+	&_text {
+		font-size: 18px;
+		color: #717C89;
+		font-weight: 500;
+	}
+	&_controll {
+		padding: 4px;
+		background-color: $orange;
+		position: absolute;
+		z-index: 2;
+		top: 43%;
+		transform: translate(0,-50%);
+		font-size: 41px;
+		cursor: pointer;
+		&--prev {
+			left: 350px;
+		}
+		&--next {
+			right: 259px;
+		}
+	}
+	@media (max-width: $break_xl) {
+		&_img {
+			text-align: center;
+			img {
+				display: inline-block;
+			}
+		}
+		&_block {
+			text-align: center;
+		}
+	}
+	@media (max-width: $break_md) {
+		&_controll {
+			&--prev {
+				left: 250px;
+			}
+			&--next {
+				right: 150px;
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		padding-left: 0;
+		&_slide {
+			padding: 0 34px;
+		}
+		&_controll {
+			padding: 15px 7px;
+			font-size: 0;
+			top: 34%;
+			&--prev {
+				left: 0;
+				img {
+					transform: rotate(180deg);
+				}
+			}
+			&--next {
+				right: 0;
+			}
+		}
+	}
+}
+// /portfolio
+
+// clients
+.clients {
+	padding: 30px 0 53px;
+	background-color: #F0F4F9;
+	&_title {
+		text-align: center;
+		margin-bottom: 39px;
+	}
+	&_row {
+		max-width: 1100px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -22px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&_col {
+		margin-bottom: 22px;
+		padding-left: 22px;
+		width: 20%;
+	}
+	&_img {
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	@media (max-width: $break_md) {
+		&_col {
+			width: 25%;
+		}
+	}
+	@media (max-width: $break_sm) {
+		display: none;
+	}
+}
+// /clients
