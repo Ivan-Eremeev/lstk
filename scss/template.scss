@@ -867,7 +867,7 @@ h2 {
 
 // portfolio
 .portfolio {
-	padding: 93px 0px;
+	padding: 93px 0px 86px;
 	background-color: #fff;
 	&_title {
 		margin-bottom: 54px;
@@ -892,6 +892,7 @@ h2 {
 .slider-portfolio {
 	padding-left: 100px;
 	&_slide {
+		padding-top: 10px;
 		&:not(.slick-active) {
 			.slider-portfolio_text {
 				opacity: 0;
@@ -903,12 +904,20 @@ h2 {
 				}
 			}
 		}
+		&.slick-current {
+			.slider-portfolio_img {
+				img {
+					margin-top: -2px;
+					box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+				}
+			}
+		}
 	}
 	&_block {
 		padding: 0 10px;
 	}
 	&_img {
-		margin-bottom: 15px;
+		margin-bottom: 11px;
 		img {
 			
 		}
@@ -923,7 +932,7 @@ h2 {
 		background-color: $orange;
 		position: absolute;
 		z-index: 2;
-		top: 43%;
+		top: 40%;
 		transform: translate(0,-50%);
 		font-size: 41px;
 		cursor: pointer;
@@ -1016,3 +1025,146 @@ h2 {
 	}
 }
 // /clients
+
+// technologies
+.technologies {
+	padding: 100px 0;
+	background-color: #fff;
+	&_title {
+		max-width: 680px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 58px;
+		line-height: 1.1;
+		text-align: center;
+		span {
+			color: $orange;
+		}
+	}
+	&_tabs {
+
+	}
+	&_list {
+		padding: 27px 50px 13px 53px;
+		background-color: $black;
+	}
+	&_trigger {
+
+	}
+	&_item {
+		margin-right: 45px;
+		margin-bottom: 15px;
+		display: inline-block;
+		font-size: 18px;
+		color: #fff;
+		&.active {
+			color: $orange;
+			&:after {
+				background-color: $orange;
+			}
+		}
+		&:hover {
+			color: $orange;
+			&:after {
+				background-color: $orange;
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: transparent;
+			transition: .3s;
+		}
+	}
+	&_content {
+
+	}
+	&_block {
+		display: flex;
+	}
+	&_subcontent {
+		width: 42%;
+	}
+	&_description {
+		padding: 42px 0 0 50px;
+		margin-bottom: 105px;
+	}
+	&_subtitle {
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 14px;
+	}
+	&_text {
+		line-height: 1.7;
+	}
+	&_description-b {
+		padding: 44px 50px 60px 50px;
+		background-color: $orange;
+		&.hide {
+			display: none;
+		}
+	}
+	&_subtitle-b {
+		margin-bottom: 9px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+	&_text-b {
+		font-size: 14px;
+	}
+	&_tabs-b {
+		width: 58%;
+		padding: 25px 0 0 50px;					
+	}
+	&_list-b {
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		margin-bottom: 62px;
+		span {
+			margin-right: 15px;
+		}
+	}
+	&_trigger-b {
+		
+	}
+	&_item-b {
+		display: inline-block;
+		margin-right: 15px;
+		border-bottom: 1px solid transparent;
+		cursor: pointer;
+		transition: .3s;
+		&.active {
+			color: $orange;
+			border-color: $orange;
+		}
+		&:hover {
+			color: $orange;
+			border-color: $orange;
+		}
+	}
+	&_img {
+		position: relative;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&.hide {
+			display: none;
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 77%;
+		}
+	}
+	@media (max-width: $break_md) {
+		display: none;
+	}
+}
+// /technologies

@@ -102,6 +102,22 @@ $(document).ready(function () {
 		}
 	});
 
+	// Табы в блоке "Технология"
+	$('.technologies_item-b').click(function() {
+		var $this = $(this),
+				tabs = $this.closest('.technologies_block'),
+				items = tabs.find('.technologies_item-b'),
+				description = tabs.find('.technologies_description-b'),
+				img = tabs.find('.technologies_img'),
+				index = $this.index();
+		items.removeClass('active');
+		img.addClass('hide');
+		description.addClass('hide');
+		items.eq(index).addClass('active');
+		img.eq(index).removeClass('hide');
+		description.eq(index).removeClass('hide');
+	});
+
 	// Аккордеон
 	// $('.accordeon_trigger').click(function() {
 	// 	var trigger = $(this),
