@@ -881,7 +881,7 @@ block content
 				form(action="#").callback_form
 					input(type="text", name="tel" placeholder="Телефон").callback_input
 					input(type="text", name="name" placeholder="Имя").callback_input
-					a(href="#").callback_btn.button Заказать звонок
+					button.callback_btn.button Заказать звонок
 		// /callback
 
 		// portfolio
@@ -1384,13 +1384,95 @@ block content
 						span.trust_circle
 		// /trust
 
+		// experts
+		sections.experts
+			.wrapper
+				h2.experts_title Наши специалисты
+				.slider-experts-container
+					.slider-experts_controll.slider-experts_controll--prev
+						img(src="img/slider-control-mob.svg" alt="icon")
+					.slider-experts_controll.slider-experts_controll--next
+						img(src="img/slider-control-mob.svg" alt="icon")
+					.row.slider-experts
+						.experts_col
+							.experts_block.matchHeight
+								.experts_img
+									img(src="img/expert-1.jpg", alt="image")
+								.experts_content
+									.experts_name Владислав  Рудаметкин  
+									.experts_job Основатель компании
+									.experts_open
+										span Достижения
+										.experts_icon.icon-keyboard_arrow_right
+						.experts_col
+							.experts_block.matchHeight
+								.experts_img
+									img(src="img/expert-2.jpg", alt="image")
+								.experts_content
+									.experts_name Роман  Дмитриев  
+									.experts_job Главный инженер
+									.experts_open
+										span Достижения
+										.experts_icon.icon-keyboard_arrow_right
+						.experts_col
+							.experts_block.matchHeight
+								.experts_img
+									img(src="img/expert-3.jpg", alt="image")
+								.experts_content
+									.experts_name Александр  Ульянов  
+									.experts_job Директор по строительству
+									.experts_open
+										span Достижения
+										.experts_icon.icon-keyboard_arrow_right
+						.experts_col
+							.experts_block.matchHeight
+								.experts_img
+									img(src="img/expert-4.jpg", alt="image")
+								.experts_content
+									.experts_name Никита  Борцов  
+									.experts_job Инженер-конструктор
+									.experts_open
+										span Достижения
+										.experts_icon.icon-keyboard_arrow_right
+		// /experts
+
+		// production
+		section.production
+			.wrapper
+				h2.production_title Собственное производство  
+				.production_text
+					p Полная автоматизация производства позволяет добиться высокого качества выпускаемой продукции и создавать каркасы зданий с точностью до ±1 мм на 10 метров стены.
+					p   Это стало возможным благодаря применению надежной связки - программное обеспечение + производственная линия. Элементы конструкции производится по 3D чертежам загружаемым прямо в память станка.
+				.production_play.icon-play2
+		// /production
+
+		// delivery
+		section.delivery
+			.wrapper
+				h2.delivery_title Доставка по ЮФО и СКФО  
+				p.delivery_text Мы позаботимся об удобной и экономичной транспортировке еще на стадии разработки. Ваша конструкция для сборки будет спроектирована минимально возможной длины*, что позволит осуществить доставку в любую точку Южного и Северо-Кавказского Федерального округов.
+				.delivery_img
+					img(src="img/delivery.svg", alt="image")
+		// /delivery
+
+		// conlustation
+		section.conlustation
+			.wrapper
+				h2.conlustation_title Консультация
+				.conlustation_text Профессиональные специалисты компании «Директ ЛТСК» помогут вам!
+				form(action="#").callback_form
+					input(type="text", name="tel" placeholder="Телефон").callback_input
+					input(type="text", name="name" placeholder="Имя").callback_input
+					button.callback_btn.button Заказать звонок
+		// /conlustation
+
 		include blocks/footer.jade
 
 block js
 	script(src="js/jquery-3.2.1.min.js")
 	//- script(src="js/jquery.fancybox.min.js")
 	script(src="js/slick.min.js")
-	//- script(src="js/jquery.matchHeight-min.js")
+	script(src="js/jquery.matchHeight-min.js")
 	//- script(src="js/jquery.inputmask.bundle.min.js")
 	//- script(src="js/jquery.tinyscrollbar.min.js")
 	//- script(src="js/autosize.min.js")
