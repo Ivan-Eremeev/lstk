@@ -215,11 +215,17 @@ h2 {
 		color: $black;
 		font-weight: 500;
 		margin-bottom: 13px;
+		&:hover {
+			color: $orange;
+		}
 	}
 	&_mail {
 		display: block;
 		color: $black;
 		margin-bottom: 11px;
+		&:hover {
+			color: $orange;
+		}
 	}
 	&_address {
 		
@@ -236,6 +242,9 @@ h2 {
 		background-color: $orange;
 		color: #fff;
 		font-size: 24px;
+		&:hover {
+			box-shadow: 0 0 10px rgba(251,168,25,.7);
+		}
 	}
 	@media (max-width: $break_sm) {
 		padding: 0 5px;
@@ -1659,3 +1668,137 @@ h2 {
 	}
 }
 // /conlustation
+
+// location
+.location {
+	position: relative;
+	&_map {
+		min-height: 550px;
+	}
+	@media (max-width: $break_sm) {
+		padding: 45px 26px 32px 26px;
+		&_map {
+			display: none;
+		}
+	}
+}
+.contacts {
+	width: 100%;
+	max-width: 375px;
+	padding: 38px 10px 80px 41px;
+	position: absolute;
+	top: 109px;
+	left: 21%;
+	background-color: $orange;
+	z-index: 2;
+	&_city {
+		font-weight: bold;
+		margin-bottom: 3px;
+	}
+	&_address {	
+		margin-bottom: 34px;
+	}
+	&_mail {
+		margin-bottom: 4px;
+		a {
+			color: $black;
+
+			border-bottom: 1px solid transparent;
+			&:hover {
+				border-color: $black;
+			}
+		}
+	}
+	&_phone {
+		margin-bottom: 40px;
+		font-weight: bold;
+		a {
+			color: $black;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				border-color: $black;
+			}
+		}
+	}
+	&_social {
+
+	}
+	&_icon {
+		padding: 3px;
+		margin-right: 10px;
+		background-color: #fff;
+		font-size: 24px;
+		color: $orange;
+		&:hover {
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+		}
+	}
+	&_logo {
+		position: absolute;
+		right: 60px;
+		bottom: 23px;
+		img {
+			width: 103px;
+		}
+	}
+	@media (max-width: $break_sm) {
+		padding: 26px 10px 70px 41px;
+		position: relative;
+		left: auto;
+		top: auto;
+		margin-left: auto;
+		margin-right: auto;
+		&_phone {
+			margin-bottom: 25px;
+		}
+		&_icon {
+			font-size: 20px;
+		}
+		&_logo {
+			width: 92px;
+			right: 25px;
+			bottom: 20px;
+		}
+	}
+}
+// /location
+
+// footer
+.footer {
+	padding: 17px 0 24px;
+	background-color: $black;
+	color: #fff;
+	font-size: 14px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&_agreement {
+		text-decoration: underline;
+		color: #fff;
+	}
+	&_right {
+		display: flex;
+	}
+	&_studio {
+		margin-right: 80px;
+		a {
+			color: $orange;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				border-color: $orange;
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		padding: 21px 0 24px;
+		font-size: 9px;
+		&_studio {
+			margin-right: 0;
+		}
+		&_copy {
+			display: none;
+		}
+	}
+}
+// /footer

@@ -315,7 +315,46 @@ $(document).ready(function () {
 	// 	}
 	// });
 
+	// Карта
+	ymaps.ready(init);
+	function init(){ 
+		// Создание карты.    
+		var myMap = new ymaps.Map("map", {
+		// Координаты центра карты.
+		// Порядок по умолчанию: «широта, долгота».
+		// Чтобы не определять координаты центра карты вручную,
+		// воспользуйтесь инструментом Определение координат.
+			center: [45.062315641174486,38.97716786473461], // Краснодар
+		// Уровень масштабирования. Допустимые значения:
+		// от 0 (весь мир) до 19.
+		zoom: 18,
+		controls: ['typeSelector']
+		}),
+		MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #000; font-size: 14px; background: #fff; width: 120px; border-radius: 5px">$[properties.iconContent]<span style="display: block; color: #FF7E7D; font-size: 12px;">Закрыто до 09:00</span></div>'
+    ),
 
+    myPlacemark = new ymaps.Placemark([45.0624895745882,38.97903199999998], {
+        iconContent: 'Связьстрой-2'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/point-map.jpg',
+        // Размеры метки.
+        iconImageSize: [45, 60],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-25, -70],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [50, 10],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    myMap.geoObjects
+	    .add(myPlacemark);
+	};
 
 	// Слежение за изменением размера окна браузера
 	var heightResized = false;

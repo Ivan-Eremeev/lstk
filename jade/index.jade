@@ -1466,6 +1466,24 @@ block content
 					button.callback_btn.button Заказать звонок
 		// /conlustation
 
+		// location
+		.location
+			.location_map#map
+			.contacts
+				.contacts_city г.Краснодар 
+				.contacts_address ул. Клубная, 12А, оф. 233/2  
+				.contacts_mail
+					a(href="mailto:info@1lstk.ru") info@1lstk.ru 
+				.contacts_phone
+					a(href="tel:88008888888") 8-800-888-88-88
+				.contacts_social
+					a(href="#").contacts_icon.icon-vk
+					a(href="#").contacts_icon.icon-facebook
+					a(href="#").contacts_icon.icon-youtube
+				.contacts_logo
+					img(src="img/logo-menu.svg", alt="image")
+		// /location
+
 		include blocks/footer.jade
 
 block js
@@ -1480,4 +1498,6 @@ block js
 	//- script(src="js/jquery.mmenu.all.js")
 	//- script(src="js/wow.min.js")
 	//- script(src="js/fullpage.min.js")
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=b4948c5b-bf9e-4fb6-9395-9512ba1c5fd5&lang=ru_RU"
+  type="text/javascript")
 	script(src="js/script.js")
