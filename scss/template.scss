@@ -371,7 +371,6 @@ h2 {
 		&_title {
 			margin-bottom: 47px;
 			font-size: 20px;
-			word-spacing: -7px;
 			line-height: 1.4;
 		}
 		&_val {
@@ -858,6 +857,7 @@ h2 {
 		width: 100%;
 		text-align: center;
 		border: none;
+		transition: .3s;
 	}
 	@media (max-width: $break_md) {
 		&_form {
@@ -1802,3 +1802,250 @@ h2 {
 	}
 }
 // /footer
+
+// modal-catalog
+.modal-catalog {
+	max-width: 970px;
+	max-height: 100%;
+	background-color: #fff;
+	box-shadow: 0 2px 10px rgba(0,0,0,.5);
+	overflow: auto;
+	&_body {
+		display: flex;
+		padding: 45px 51px;
+	}
+	&_content {
+		width: 51%;
+		padding-right: 20px;
+	}
+	&_title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 19px;
+		font-size: 24px;
+		font-weight: bold;
+		span {
+			margin-left: 30px;
+			font-size: 14px;
+		}
+	}
+	&_subtitle {
+		margin-bottom: 7px;
+		font-weight: bold;
+	}
+	&_subtitle-b {
+		margin-bottom: 16px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	&_text {
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	&_kits {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&_kit {
+		width: 45%;
+		position: relative;
+		padding-bottom: 50px;
+	}
+	&_list {
+		margin-bottom: 52px;
+	}
+	&_item {
+		font-size: 13px;
+		font-weight: 500;
+	}
+	&_price {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-size: 11px;
+		span {
+			display: block;
+			margin-left: 10px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	&_interactive {
+		width: 49%;
+		position: relative;
+		padding-bottom: 100px;
+	}
+	&_slider {
+		position: relative;
+	}
+	&_close {
+		width: 30px;
+		height: 30px;
+		background-color: $orange;
+		position: absolute;
+		top: 0;
+		right: 0;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:hover {
+			&:after {
+				background-color: #fff;
+			}
+			&:before {
+				background-color: #fff;
+			}
+		}
+	}
+	&_form {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	&_btn {
+		width: 48%;
+		padding: 10px 5px;
+		background-color: $orange;
+		border: none;
+		outline: none;
+		font-size: 11px;
+		font-weight: 900;
+		text-transform: uppercase;
+		font-weight: bold;
+		cursor: pointer;
+		transition: .3s;
+		&:hover {
+			color: #fff;
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_body {
+			padding: 60px 45px;
+		}
+		&_content {
+			width: 100%;
+			padding-right: 0;
+		}
+		&_title {
+			margin-bottom: 45px;
+		}
+		&_subtitle-b {
+			margin-bottom: 25px;
+		}
+		&_slider {
+			padding: 0 14px;
+			margin-bottom: 35px;
+		}
+		&_img {
+			&:after {
+				padding-top: 100%;
+			}
+		}
+		&_kit {
+			width: 100%;
+			padding-bottom: 60px;
+		}
+		&_list {
+			margin-bottom: 20px;
+		}
+		&_item {
+			max-width: 170px;
+		}
+		&_price {
+			position: static;
+			margin-bottom: 33px;
+		}
+		&_btn {
+			width: 100%;
+			min-height: 55px;
+			max-width: 200px;
+			margin-left: 30px;
+			padding: 5px;
+			font-size: 12px;
+		}
+	}
+}
+.slider-modal-catalog {
+	&_controll {
+		padding: 11px;
+		background-color: $orange;
+		font-size: 21px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		cursor: pointer;
+		z-index: 2;
+		transition: .3s;
+		&--prev {
+			left: 0;
+		}
+		&--next {
+			right: 0;
+		}
+		&:hover {
+			color: #fff;
+		}
+	}
+	&_slide {
+		
+	}
+	&_img {
+		position: relative;
+		overflow: hidden;
+		img {
+			max-width: none;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 109%;
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_controll {
+			&--prev {
+				left: 14px;
+			}
+			&--next {
+				right: 14px;
+			}
+		}
+	}
+}
+// /modal-catalog
+
+.modal_over {
+	background-color: rgba(0,0,0,.5);
+}

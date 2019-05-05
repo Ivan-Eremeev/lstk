@@ -192,6 +192,28 @@ function sliderInitExperts(slider) {
   });
 };
 
+function sliderInitModalCatalog(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    speed: 500, // Скорость перехода слайдов
+    autoplay: false, // Автопрокрутка
+    autoplaySpeed: 2000, // Скорость автопрокрутки
+    adaptiveHeight: false, // Подгоняет высоту слайдера под элемент слайда
+    infinite: true, // Зацикленное пролистывание
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.slider-modal-catalog_controll--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.slider-modal-catalog_controll--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
 // Инициализация слайдеров на десктопе и мобилке
 function sliderReinstall() {
   if (window.matchMedia("(max-width: 769px)").matches) {
@@ -200,20 +222,24 @@ function sliderReinstall() {
     sliderInitCatalog($('.slider-catalog'));
     sliderInitPortfolioMobile($('.slider-portfolio'));
     sliderInitExperts($('.slider-experts'));
+    sliderInitModalCatalog($('.slider-modal-catalog'));
   }
   else if (window.matchMedia("(max-width: 1050px)").matches) {
     $('.slick-initialized').slick('unslick');
     sliderInitPortfolioMobile($('.slider-portfolio'));
     sliderInitExperts($('.slider-experts'));
+    sliderInitModalCatalog($('.slider-modal-catalog'));
   }
   else if (window.matchMedia("(max-width: 1440px)").matches) {
     $('.slick-initialized').slick('unslick');
     sliderInitPortfolioSmallDesctop($('.slider-portfolio'));
+    sliderInitModalCatalog($('.slider-modal-catalog'));
   }
   else {
     $('.slick-initialized').slick('unslick');
     sliderInitFirst($('.slider-first'));
     sliderInitPortfolio($('.slider-portfolio'));
+    sliderInitModalCatalog($('.slider-modal-catalog'));
   }
 }
 sliderReinstall();

@@ -138,21 +138,21 @@ $(document).ready(function () {
 	// });
 
 	// Модальное окно
-	// $('.modal-trigger').on('click', function() {
-	// 	var data = $(this).data('modal'),
-	// 			modalOver = $('.modal_over'),
-	// 			modal = $('#modal-' + data);
-	// 	modal.toggleClass('open')
-	// 	.next('.modal_over').toggleClass('open');
-	// 	$('.modal_close').on('click', function() {
-	// 		modal.removeClass('open'),
-	// 		modalOver.removeClass('open');
-	// 	});
-	// 	modalOver.on('click', function() {
-	// 		modal.removeClass('open');
-	// 		modalOver.removeClass('open');
-	// 	});
-	// });
+	$('.modal-trigger').on('click', function() {
+		var data = $(this).data('modal'),
+				modalOver = $('.modal_over'),
+				modal = $('#modal-' + data);
+		modal.toggleClass('open')
+		.next('.modal_over').toggleClass('open');
+		$('.modal_close').on('click', function() {
+			modal.removeClass('open'),
+			modalOver.removeClass('open');
+		});
+		modalOver.on('click', function() {
+			modal.removeClass('open');
+			modalOver.removeClass('open');
+		});
+	});
 
 	// Стилизация полосы прокрутки
 	// $('#scrollbar1').tinyscrollbar({
