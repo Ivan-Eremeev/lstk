@@ -1,4 +1,9 @@
 // settings
+html {
+	&.lock {
+		overflow: hidden;
+	}
+}
 a {
 	transition: .3s;
 	text-decoration: none;
@@ -1437,6 +1442,7 @@ h2 {
 		padding-bottom: 38px;
 		background-color: #fff;
 		transition: .3s;
+		cursor: pointer;
 		&:hover {
 			box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
 		}
@@ -1806,10 +1812,8 @@ h2 {
 // modal-catalog
 .modal-catalog {
 	max-width: 970px;
-	max-height: 100%;
 	background-color: #fff;
 	box-shadow: 0 2px 10px rgba(0,0,0,.5);
-	overflow: auto;
 	&_body {
 		display: flex;
 		padding: 45px 51px;
@@ -2045,6 +2049,238 @@ h2 {
 	}
 }
 // /modal-catalog
+
+// modal-order
+.modal-order {
+	max-width: 670px;
+	&_body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&_content {
+		width: 55%;
+		padding: 40px 50px 58px;
+		background-color: #fff;
+	}
+	&_form {
+
+	}
+	&_input {
+		width: 100%;
+		padding: 14px 20px;
+		margin-bottom: 11px;
+		background-color: #F0F4F9;
+		border: none;
+		font-size: 16px;
+		&::placeholder {
+			color: #717C89;
+		}
+	}
+	&_btn {
+		width: 100%;
+		padding: 23px 5px 17px 5px;
+		margin-bottom: 14px;
+		border: none;
+		background-color: $orange;
+		font-size: 16px;
+		font-weight: 900;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:hover {
+			color: #fff;
+		}
+	}
+	&_consent {
+		display: flex;
+		align-items: center;
+	}
+	&_checkbox {
+		width: 11px;
+		height: 11px;
+		margin-right: 5px;
+		background: #EBEBEB;
+		border: 1px solid #CED4DB;
+		border-radius: 0;
+	}
+	&_label {
+		font-size: 8px;
+		color: #C0C0C0;
+	}
+	&_description {
+		width: 45%;
+		padding: 79px 37px 10px 55px;
+		background-color: $black;
+		position: relative;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&_text {
+		position: relative;
+		z-index: 2;
+	}
+	&_logo {
+		position: absolute;
+		right: 38px;
+		bottom: 44px;
+		img {
+			width: 95px;
+		}
+	}
+	&_close {
+		width: 30px;
+		height: 30px;
+		background-color: $orange;
+		position: absolute;
+		top: 0;
+		right: 0;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:hover {
+			&:after {
+				background-color: #fff;
+			}
+			&:before {
+				background-color: #fff;
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_content {
+			width: 100%;
+		}
+		&_description {
+			display: none;
+		}
+	}
+}
+// /modal-order
+
+// modal-story
+.modal-story {
+	max-width: 672px;
+	&_body {
+		display: flex;
+		padding: 19px 30px 30px;
+		background-color: #fff;
+	}
+	&_content {
+		width: 54%;
+	}
+	&_title-big {
+		font-size: 26px;
+		font-weight: bold;
+	}
+	&_title {
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 27px;
+	}
+	&_text {
+		margin-bottom: 24px;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	&_item {
+		padding-left: 10px;
+		margin-bottom: 3px;
+		font-size: 14px;
+		position: relative;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 5px;
+			background-color: $black;
+			position: absolute;
+			top: 10px;
+			left: 0px;
+		}
+	}
+	&_img {
+		width: 46%;
+		margin-top: 11px;
+		position: relative;
+		overflow: hidden;
+		img {
+			max-width: none;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 99%;
+		}
+	}
+	&_close {
+		width: 30px;
+		height: 30px;
+		background-color: $orange;
+		position: absolute;
+		top: 0;
+		right: 0;
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 10px;
+			background-color: $black;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 14px;
+			left: 10px;
+			transition: .3s;
+		}
+		&:hover {
+			&:after {
+				background-color: #fff;
+			}
+			&:before {
+				background-color: #fff;
+			}
+		}
+	}
+}
+// /modal-story
 
 .modal_over {
 	background-color: rgba(0,0,0,.5);

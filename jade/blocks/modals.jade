@@ -1,5 +1,5 @@
 // modal-catalog
-.modal-catalog#modal-1.modal
+.modal-catalog#modal-catalog-1.modal
 	.modal-catalog_body
 		.modal-catalog_content
 			.modal-catalog_title Автосервис
@@ -60,6 +60,56 @@
 				button.modal-catalog_btn заказать смету каркаса
 				button.modal-catalog_btn заказать смету  <br>проекта под ключ
 		.modal-catalog_close.modal_close
+.modal-catalog_over.modal_over
 // /modal-catalog
 
+// modal-order
+.modal.modal-order#modal-order
+	.modal-order_body
+		.modal_content.modal-order_content
+			form(action="#").modal-order_form
+				input(type="text", name="name" placeholder="Имя").modal-order_input
+				input(type="text", name="tel" placeholder="Телефон").modal-order_input
+				input(type="text", name="city" placeholder="Город").modal-order_input
+				button.modal-order_btn Отправить
+				.modal-order_consent
+					input#consent(type="checkbox", name="checkbox").modal-order_checkbox
+					label(for="consent").modal-order_label Согласие на обработку персональных данных
+		.modal-order_description
+			.modal-order_text Просто заполните форму и мы  с вами свяжемся  в течение 10 мин,  что бы обсудить детали
+			.modal-order_logo
+				img(src="img/logo.svg", alt="logo")
+	.modal_close.modal-order_close
 .modal-catalog_over.modal_over
+// /modal-order
+
+// modal-news
+.modal.modal-story#modal-news-1
+	.modal-story_body
+		.modal_content.modal-story_content
+			.modal-story_title Мы покорили очередную  вершину! 
+			.modal-story_text Этим летом нашей компанией в лице технического руководителя была покорена самая высокая точка России и Европы.
+			.modal-story_text Эльбрус является спящим стратовулканом высотой 5 642 метра.
+		.modal-story_img
+			img(src="img/news-2.jpg", alt="image")
+	.modal_close.modal-story_close
+.modal-catalog_over.modal_over
+// /modal-news
+
+// modal-expert
+.modal.modal-story#modal-expert-1
+	.modal-story_body
+		.modal_content.modal-story_content
+			.modal-story_title-big Роман  Дмитриев 
+			.modal-story_title Главный инженер
+			ul.modal-story_list
+				li.modal-story_item строитель с 12–летним стажем
+				li.modal-story_item 8 лет в каркасном строительстве
+				li.modal-story_item участник олимпийской стройки СОЧИ-2014
+				li.modal-story_item эксперт в области легких стальных тонкостенных конструкций
+				li.modal-story_item даст ответы на самые сложные вопросы касательно вашего объекта
+		.modal-story_img
+			img(src="img/expert-2.jpg", alt="image")
+	.modal_close.modal-story_close
+.modal-catalog_over.modal_over
+// /modal-expert

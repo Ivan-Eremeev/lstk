@@ -141,16 +141,23 @@ $(document).ready(function () {
 	$('.modal-trigger').on('click', function() {
 		var data = $(this).data('modal'),
 				modalOver = $('.modal_over'),
-				modal = $('#modal-' + data);
+				modal = $('#' + data),
+				html = $('html'),
+				documentWidth = parseInt(document.documentElement.clientWidth),
+				windowsWidth = parseInt(window.innerWidth),
+				scrollbarWidth = windowsWidth - documentWidth;
 		modal.toggleClass('open')
 		.next('.modal_over').toggleClass('open');
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		$('.modal_close').on('click', function() {
-			modal.removeClass('open'),
+			modal.removeClass('open');
 			modalOver.removeClass('open');
+			html.removeClass('lock').css('padding-right',0);
 		});
 		modalOver.on('click', function() {
 			modal.removeClass('open');
 			modalOver.removeClass('open');
+			html.removeClass('lock').css('padding-right',0);
 		});
 	});
 
