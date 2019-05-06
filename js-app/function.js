@@ -32,10 +32,16 @@ $(document).ready(function () {
 	$('.menu_btn').click(function () {
 		var header = $(this).closest('#header'),
 				menu = header.next('#menu'),
-				btn = $(this);
+				btn = $(this),
+				html = $('html'),
+				documentWidth = parseInt(document.documentElement.clientWidth),
+				windowsWidth = parseInt(window.innerWidth),
+				scrollbarWidth = windowsWidth - documentWidth;
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		menu.toggleClass('open');
 		btn.toggleClass('is-active');
 		menu.find('a').click(function() {
+			html.removeClass('lock').css('padding-right',0);
 			menu.removeClass('open');
 			btn.removeClass('is-active');
 		});

@@ -55,6 +55,11 @@ function sliderInitFirst(slider,sliderFor) {
   // $('.sliderButton_next').click(function() {
   //   slider.slick('slickNext');
   // });
+
+  slider.find('.first-screen_dots button').each(function() {
+    var text = $(this).text();
+    $(this).text('0' + text);
+  });
 };
 
 function sliderInitFirstMob(slider) {
