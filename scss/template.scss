@@ -943,10 +943,22 @@ h2 {
 		padding: 0 10px;
 	}
 	&_img {
+		position: relative;
+		overflow: hidden;
 		margin-bottom: 11px;
-		cursor: pointer;
 		img {
+			max-width: none;
+			min-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
 			transition: .3s;
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-top: 67%;
 		}
 	}
 	&_text {
@@ -984,10 +996,10 @@ h2 {
 	@media (max-width: $break_md) {
 		&_controll {
 			&--prev {
-				left: 250px;
+				left: 110px;
 			}
 			&--next {
-				right: 150px;
+				right: 10px;
 			}
 		}
 	}

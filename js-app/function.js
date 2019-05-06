@@ -9,6 +9,8 @@
 
 $(document).ready(function () {
 
+	// Подключение файлов
+	// При использовании gulp поменять "@prepros-prepend" на "//="
 	// libs-settings/fancybox_settings.js
 	// libs-settings/mmenu_settings.js
 	// @prepros-prepend libs-settings/slick_settings.js
@@ -56,14 +58,14 @@ $(document).ready(function () {
 	// screenHeight();
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 		$(this).addClass('active');
-	// 	}
-	// 	return false;
-	// });
+	$('#menu a[href^="#"]').click( function(){ 
+		var scroll_el = $(this).attr('href'); 
+		if ($(scroll_el).length != 0) {
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+			$(this).addClass('active');
+		}
+		return false;
+	});
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
 	// var HeaderTop = $('#header').offset().top;
