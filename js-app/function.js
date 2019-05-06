@@ -146,18 +146,18 @@ $(document).ready(function () {
 				documentWidth = parseInt(document.documentElement.clientWidth),
 				windowsWidth = parseInt(window.innerWidth),
 				scrollbarWidth = windowsWidth - documentWidth;
+		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		modal.toggleClass('open')
 		.next('.modal_over').toggleClass('open');
-		html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		$('.modal_close').on('click', function() {
+			html.removeClass('lock').css('padding-right',0);
 			modal.removeClass('open');
 			modalOver.removeClass('open');
-			html.removeClass('lock').css('padding-right',0);
 		});
 		modalOver.on('click', function() {
+			html.removeClass('lock').css('padding-right',0);
 			modal.removeClass('open');
 			modalOver.removeClass('open');
-			html.removeClass('lock').css('padding-right',0);
 		});
 	});
 
