@@ -148,16 +148,17 @@ $(document).ready(function () {
 	// Модальное окно
 	$('.modal-trigger').on('click', function() {
 		var data = $(this).data('modal'),
-				modalOver = $('.modal_over'),
 				modal = $('#' + data),
+				modalOver = modal.next($('.modal_over')),
+				modalClose = modal.find($('.modal_close')),
 				html = $('html'),
 				documentWidth = parseInt(document.documentElement.clientWidth),
 				windowsWidth = parseInt(window.innerWidth),
 				scrollbarWidth = windowsWidth - documentWidth;
-		html.toggleClass('lock').css('padding-right',scrollbarWidth);
-		modal.toggleClass('open')
-		.next('.modal_over').toggleClass('open');
-		$('.modal_close').on('click', function() {
+		html.addClass('lock').css('padding-right',scrollbarWidth);
+		modal.addClass('open');
+		modalOver.addClass('open');
+		modalClose.on('click', function() {
 			html.removeClass('lock').css('padding-right',0);
 			modal.removeClass('open');
 			modalOver.removeClass('open');
