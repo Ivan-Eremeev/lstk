@@ -17,8 +17,9 @@ function sliderInitFirst(slider,sliderFor) {
     dots: true, // Пагинация
     dotsClass: 'first-screen_dots', // Контейнер пагинации
     arrows: false, // Стрелки
-    speed: 500, // Скорость перехода слайдов
-    autoplay: false, // Автопрокрутка
+    speed: 1000, // Скорость перехода слайдов
+    autoplay: true, // Автопрокрутка
+    pauseOnHover: false,
     autoplaySpeed: 2000, // Скорость автопрокрутки
     // centerMode: false, // Задает класс .slick-center слайду в центре
     // focusOnSelect: true, // Выбрать слайд кликом
